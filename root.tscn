@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc8pg3qsvjxli"]
+
+[ext_resource type="PackedScene" uid="uid://bps23aky8785u" path="res://item.tscn" id="1_kiacb"]
+[ext_resource type="PackedScene" uid="uid://cijtnhau464mf" path="res://playground.tscn" id="2_l0um1"]
+[ext_resource type="Script" path="res://secondary_test.gd" id="3_rpk2u"]
+
+[node name="Node" type="Node"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 1109.0
+offset_bottom = 640.0
+theme_override_constants/separation = 40
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+text = "Drag and drop these items..."
+
+[node name="ItemsVBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+
+[node name="Item1" parent="HBoxContainer/VBoxContainer1/ItemsVBoxContainer" instance=ExtResource("1_kiacb")]
+layout_mode = 2
+modulation = Color(0, 0.913725, 0.117647, 0.415686)
+
+[node name="Item2" parent="HBoxContainer/VBoxContainer1/ItemsVBoxContainer" instance=ExtResource("1_kiacb")]
+layout_mode = 2
+modulation = Color(0.882353, 0.0235294, 0.364706, 1)
+
+[node name="Item3" parent="HBoxContainer/VBoxContainer1/ItemsVBoxContainer" instance=ExtResource("1_kiacb")]
+layout_mode = 2
+modulation = Color(0, 0.972549, 0.988235, 0.745098)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "...for example to this Node2D via a Subviewport:"
+
+[node name="PlaygroundNode2DSubViewport" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("2_l0um1")]
+layout_mode = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "...or to this other Control node directly:"
+
+[node name="PlaygroundControlPanel" type="Panel" parent="HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("3_rpk2u")

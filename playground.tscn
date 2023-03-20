@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://cijtnhau464mf"]
+
+[ext_resource type="Script" path="res://playground.gd" id="1_8mxmc"]
+
+[node name="Playground" type="SubViewportContainer"]
+offset_right = 400.0
+offset_bottom = 600.0
+script = ExtResource("1_8mxmc")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(400, 600)
+render_target_update_mode = 4
+
+[node name="Node2D" type="Node2D" parent="SubViewport"]
+unique_name_in_owner = true
+
+[node name="DemoBackgroundColorRect" type="ColorRect" parent="SubViewport/Node2D"]
+offset_right = 400.0
+offset_bottom = 600.0
+color = Color(0.176471, 0.14902, 0.298039, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SubViewport/Node2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SubViewport/Node2D/StaticBody2D"]
+polygon = PackedVector2Array(1, 3, 11, 6, 30, 216, 53, 430, 75, 497, 113, 531, 157, 548, 208, 550, 301, 520, 343, 467, 361, 392, 370, 274, 392, 5, 398, 3, 398, 598, 204, 596, 3, 598)
+
+[node name="Line2D" type="Line2D" parent="SubViewport/Node2D"]
+points = PackedVector2Array(14, 12, 50, 432, 73, 499, 110, 529, 155, 546, 205, 549, 299, 520, 341, 467, 360, 393, 391, 6)

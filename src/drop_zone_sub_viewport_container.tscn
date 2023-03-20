@@ -1,11 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cijtnhau464mf"]
+[gd_scene load_steps=2 format=3 uid="uid://d3gycao6kypxr"]
 
-[ext_resource type="Script" path="res://playground.gd" id="1_8mxmc"]
+[ext_resource type="Script" path="res://drop_zone_sub_viewport_container.gd" id="1_u203d"]
 
 [node name="Playground" type="SubViewportContainer"]
 offset_right = 400.0
 offset_bottom = 600.0
-script = ExtResource("1_8mxmc")
+script = ExtResource("1_u203d")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 handle_input_locally = false

@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dc8pg3qsvjxli"]
+[gd_scene load_steps=4 format=3 uid="uid://wr2ax5xgoh3q"]
 
 [ext_resource type="PackedScene" uid="uid://bps23aky8785u" path="res://item.tscn" id="1_kiacb"]
-[ext_resource type="PackedScene" uid="uid://cijtnhau464mf" path="res://playground.tscn" id="2_l0um1"]
-[ext_resource type="Script" path="res://secondary_test.gd" id="3_rpk2u"]
+[ext_resource type="PackedScene" uid="uid://d3gycao6kypxr" path="res://drop_zone_sub_viewport_container.tscn" id="2_l0um1"]
+[ext_resource type="Script" path="res://drop_zone_control_node.gd" id="3_rpk2u"]
 
 [node name="Node" type="Node"]
 
@@ -42,7 +42,7 @@ layout_mode = 2
 layout_mode = 2
 text = "...for example to this Node2D via a Subviewport:"
 
-[node name="PlaygroundNode2DSubViewport" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("2_l0um1")]
+[node name="DropZoneNode2DViaSubViewport" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("2_l0um1")]
 layout_mode = 2
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
@@ -52,7 +52,7 @@ layout_mode = 2
 layout_mode = 2
 text = "...or to this other Control node directly:"
 
-[node name="PlaygroundControlPanel" type="Panel" parent="HBoxContainer/VBoxContainer3"]
+[node name="DropZoneControl" type="Panel" parent="HBoxContainer/VBoxContainer3"]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_vertical = 3

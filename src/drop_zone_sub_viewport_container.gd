@@ -13,9 +13,9 @@ func _drop_data(at_position, data):
 	component.add_child(sprite)
 	
 	var shape = CollisionShape2D.new()
-	var circle = RectangleShape2D.new()
-	circle.size = Vector2(64, 64)
-	shape.shape = circle
+	var rect = RectangleShape2D.new()
+	rect.size = Vector2(64, 64)
+	shape.shape = rect
 	component.add_child(shape)
 	
 	%Node2D.add_child(component)
